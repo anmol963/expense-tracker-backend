@@ -15,4 +15,4 @@ FROM eclipse-temurin:17-jre-jammy
 WORKDIR /app
 COPY --from=build /app/target/*.jar app.jar
 EXPOSE 5000
-ENTRYPOINT ["java", "-jar", "app.jar"]
+ENTRYPOINT ["sh", "-c", "java -Dspring.data.mongodb.uri=mongodb+srv://vibecoding360_db_user:Kalel%40123@expense-tracker.o3hkity.mongodb.net/expense_tracker?appName=expense-tracker -jar app.jar"]
